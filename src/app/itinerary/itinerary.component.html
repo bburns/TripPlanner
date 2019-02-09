@@ -1,8 +1,8 @@
 <div class="itinerary">
-  <div class="itinerary-title">
+  <div class="itinerary-title well well-sm">
     Itinerary
   </div>
-  <ul class="itinerary-list">
-    <li *ngFor="let place of places">{{place.name}}</li>
-  </ul>
+  <div class="itinerary-list list-group">
+    <a href="#" class="list-group-item list-group-item-action" *ngFor="let place of places">{{place.name}}</a>
+  </div>
 </div>
