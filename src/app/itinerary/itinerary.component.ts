@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-itenerary',
-  templateUrl: './itenerary.component.html',
-  styleUrls: ['./itenerary.component.scss']
+  selector: 'app-itinerary',
+  templateUrl: './itinerary.component.html',
+  styleUrls: ['./itinerary.component.scss']
 })
-export class IteneraryComponent implements OnInit {
+export class ItineraryComponent implements OnInit {
 
   private places: any;
 

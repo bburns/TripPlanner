@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
-import { IteneraryComponent } from './itenerary/itenerary.component';
+import { ItineraryComponent } from './itinerary/itinerary.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { AgmCoreModule } from '@agm/core';
@@ -19,7 +19,7 @@ import { AgmCoreModule } from '@agm/core';
     HeaderComponent,
     MapComponent,
     HomeComponent,
-    IteneraryComponent,
+    ItineraryComponent,
     FooterComponent,
   ],
   imports: [
