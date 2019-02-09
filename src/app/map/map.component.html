@@ -1,6 +1,25 @@
 <!-- <agm-map [latitude]="lat" [longitude]="lng"> -->
-  <!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker> -->
+
 <agm-map [fitBounds]="true">
-  <agm-marker [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true" *ngFor="let place of places">
+
+  <!-- show places -->
+  <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true">
   </agm-marker>
+
+  <!-- show lines between places -->
+  <!-- <agm-polyline>
+    <agm-polyline-point *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng">
+    </agm-polyline-point>
+  </agm-polyline> -->
+
+  <agm-polyline *ngFor="let place of places;let i = index;" [strokeOpacity]="0.5" [strokeWeight]="8"
+    [strokeColor]="place.color">
+    <agm-polyline-point [latitude]="place.lat" [longitude]="place.lng">
+    </agm-polyline-point>
+    <ng-container *ngIf="places[i+1]">
+      <agm-polyline-point [latitude]="places[i+1].lat" [longitude]="places[i+1].lng">
+      </agm-polyline-point>
+    </ng-container>
+  </agm-polyline>
+
 </agm-map>
