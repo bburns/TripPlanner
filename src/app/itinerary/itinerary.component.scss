@@ -1,12 +1,21 @@
+// @import "~variables.scss";
+@import "../../variables.scss";
+
 .itinerary {
   font-size: 0.8em;
   padding: 0.5em;
-  width: 20%;
+  // width: 30%; // set also in map.scss
+  // max-width: 15em;
+  width: $sidebar-width;
 }
 .itinerary-title {
   font-weight: bold;
   margin-bottom: 0;
 }
 .itinerary-list {
+  font-size: 0.9em;
   color: #555;
+}
+.itinerary-delete {
+  float: right;
 }
