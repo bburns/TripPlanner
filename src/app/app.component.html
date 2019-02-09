@@ -19,17 +19,6 @@
 </div> -->
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <ul class="nav navbar-nav pull-left">
-      <li class="active"><a href="#">{{title}}</a></li>
-    </ul>
-    <ul class="nav navbar-nav pull-right">
-      <li class=""><a href="#about">About</a></li>
-    </ul>
-  </div>
-</nav>
-
 <!-- <div class="container"> -->
 <!-- <div class="map" #map> -->
 <!-- <div class="map"> -->
@@ -37,6 +26,8 @@
 <!-- <div class="map" [style.height.px]="window.innerHeight"> -->
 <!-- <div class="map" [style.height.px]="300"> -->
 <!-- <agm-map [style.height.px]="map.offsetHeight" [latitude]="lat" [longitude]="lng"> -->
+
+<div id="header"></div>
 
 <agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
