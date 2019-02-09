@@ -14,4 +14,7 @@ export class AppComponent {
     {name: 'Austin, TX', lat: 30.267153, lng: -97.7430608, color: 'red'},
     {name: 'New York, NY', lat: 40.7127, lng: -74.0059, color: 'orange'},
   ];
+  onRemovePlace(placeIndex) {
+    this.places.splice(placeIndex, 1);
+  }
 }

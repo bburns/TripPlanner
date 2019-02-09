@@ -21,9 +21,5 @@
 <!-- <agm-map [style.height.px]="map.offsetHeight" [latitude]="lat" [longitude]="lng"> -->
 
 <app-header [title]="title"></app-header>
-<!-- <app-home [lat]="lat" [lng]="lng"></app-home> -->
-<!-- <app-home [places]="places" [colors]="colors"></app-home> -->
-<app-itinerary [places]="places"></app-itinerary>
+<app-itinerary [places]="places" (removePlace)=[onRemovePlace($event)]></app-itinerary>
 <app-map [places]="places" [colors]="colors"></app-map>
-<!-- <app-map [lat]="lat" [lng]="lng"></app-map> -->
-<!-- <app-footer></app-footer> -->

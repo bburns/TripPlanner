@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ItineraryComponent implements OnInit {
 
   @Input() places: any;
-  @Output() removePlace = new EventEmitter<string>();
+  @Output() removePlace = new EventEmitter<any>();
 
   constructor() {
   }
@@ -16,7 +16,7 @@ export class ItineraryComponent implements OnInit {
   onClickMe(placeIndex) {
     let place = this.places[placeIndex];
     if (confirm(`Remove ${place.name} from itinerary?`)) {
-      this.removePlace.emit(placeIndex)
+      this.removePlace.emit(placeIndex);
     }
   }
 
