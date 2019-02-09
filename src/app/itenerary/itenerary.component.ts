@@ -12,6 +12,7 @@ export class IteneraryComponent implements OnInit {
   constructor() {
     this.places = [
       {name: 'Austin, TX', lat: 30.267153, lng: -97.7430608},
+      {name: 'New York, NY', lat: 40.7127, lng: -74.0059},
     ];
   }
 

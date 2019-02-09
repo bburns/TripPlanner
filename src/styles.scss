@@ -1,11 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+// App
+
 html, body {
   font-size: 1rem;
 }
 
 .loading {
 }
+
+
+// Header
 
 // bootstrap is setting these to 15px for the anchor, making the header too tall and messing up
 // the divs below.
@@ -19,6 +25,9 @@ html, body {
   height: 32px;
   margin-right: 8px;
 }
+
+
+// Map
 
 agm-map {
   height: 100%;
