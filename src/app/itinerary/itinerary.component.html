@@ -3,9 +3,9 @@
     Itinerary
   </div>
   <div class="itinerary-list list-group">
-    <a href="#" class="list-group-item" *ngFor="let place of places">
+    <a href="#" class="list-group-item" *ngFor="let place of places; let i = index;">
       {{place.name}}
-      <a href="#" class="itinerary-delete">x</a>
+      <a href="#" (click)="onClickMe(i)" class="itinerary-delete">x</a>
     </a>
   </div>
 </div>

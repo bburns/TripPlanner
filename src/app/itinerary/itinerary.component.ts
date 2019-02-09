@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-itinerary',
@@ -8,8 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ItineraryComponent implements OnInit {
 
   @Input() places: any;
+  @Output() removePlace = new EventEmitter<string>();
 
   constructor() {
+  }
+
+  onClickMe(placeIndex) {
+    let place = this.places[placeIndex];
+    if (confirm(`Remove ${place.name} from itinerary?`)) {
+      this.removePlace.emit(placeIndex)
+    }
   }
 
   ngOnInit() {
