@@ -30,10 +30,14 @@
   </div>
 </nav>
 
-<div class="container">
-  <div class="map" #map>
-    <agm-map [style.height.px]="map.offsetHeight" [latitude]="lat" [longitude]="lng">
-      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-    </agm-map>
-  </div>
-</div>
+<!-- <div class="container"> -->
+<!-- <div class="map" #map> -->
+<!-- <div class="map"> -->
+<!-- <div #map style="position:absolute;top:0;bottom:0;"> -->
+<!-- <div class="map" [style.height.px]="window.innerHeight"> -->
+<!-- <div class="map" [style.height.px]="300"> -->
+<!-- <agm-map [style.height.px]="map.offsetHeight" [latitude]="lat" [longitude]="lng"> -->
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
