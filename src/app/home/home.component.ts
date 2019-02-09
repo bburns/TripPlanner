@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   // @Input() lat: string;
   // @Input() lng: string;
   @Input() places: any;
+  @Input() colors: any;
 
   constructor() { }
 

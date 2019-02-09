@@ -11,9 +11,10 @@
     <agm-polyline-point *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng">
     </agm-polyline-point>
   </agm-polyline> -->
+  <!-- [strokeColor]="place.color"> -->
 
   <agm-polyline *ngFor="let place of places;let i = index;" [strokeOpacity]="0.5" [strokeWeight]="8"
-    [strokeColor]="place.color">
+    [strokeColor]="colors[i]">
     <agm-polyline-point [latitude]="place.lat" [longitude]="place.lng">
     </agm-polyline-point>
     <ng-container *ngIf="places[i+1]">
