@@ -7,6 +7,13 @@ html, body {
 .loading {
 }
 
+// bootstrap is setting these to 15px for the anchor, making the header too tall and messing up
+// the divs below.
+.navbar-nav > li a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .logo {
   width: 32px;
   height: 32px;

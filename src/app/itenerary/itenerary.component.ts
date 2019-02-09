@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IteneraryComponent implements OnInit {
 
-  constructor() { }
+  private places: any;
+
+  constructor() {
+    this.places = [
+      {name: 'Austin, TX', lat: 30.267153, lng: -97.7430608},
+    ];
+  }
 
   ngOnInit() {
   }
