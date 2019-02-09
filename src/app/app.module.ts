@@ -14,6 +14,7 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD2HsJrbaxx_-0uOOq-mPU5ZQCoCio07Yo', // my google maps api key
+      libraries: ['places'],
     })
   ],
   providers: [],
