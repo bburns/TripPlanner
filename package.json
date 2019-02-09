@@ -19,7 +19,7 @@
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
-    "@angular/router": "~7.2.0",
+    "@angular/router": "^7.2.4",
     "@types/googlemaps": "^3.30.16",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
