@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = 'arttour-angular';
+  title: string = 'TripPlanner';
   lat: number = 30.267153;
   lng: number = -97.7430608;
 }
