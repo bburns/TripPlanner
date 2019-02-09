@@ -13,7 +13,7 @@ import { AgmCoreModule } from '@agm/core';
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD2HsJrbaxx_-0uOOq-mPU5ZQCoCio07Yo'
+      apiKey: 'AIzaSyD2HsJrbaxx_-0uOOq-mPU5ZQCoCio07Yo', // my google maps api key
     })
   ],
   providers: [],
