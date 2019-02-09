@@ -7,8 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  @Input() lat: string;
-  @Input() lng: string;
+  // @Input() lat: string;
+  // @Input() lng: string;
+  @Input() places: any;
 
   constructor() { }
 
