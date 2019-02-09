@@ -1,3 +1,8 @@
 <div class="itenerary">
-  <div *ngFor="let place of places">{{place.name}}</div>
+  <div class="itenerary-title">
+    Itenerary
+  </div>
+  <ul class="itenerary-list">
+    <li *ngFor="let place of places">{{place.name}}</li>
+  </ul>
 </div>
