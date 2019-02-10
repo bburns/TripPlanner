@@ -77,6 +77,7 @@ export class AppComponent {
   public handleRemovePlace(i) {
     // alert('remove place ' + JSON.stringify(i));
     this.itinerary.splice(i, 1);
+    console.log(this.itinerary);
   }
 
 }
