@@ -26,7 +26,7 @@
   <!-- show colored lines between place markers -->
   <!-- need to make a separate polyline between each pair of places to have different colors between them -->
   <agm-polyline *ngFor="let place of places;let i = index;" [strokeOpacity]="0.5" [strokeWeight]="8"
-    [strokeColor]="colors[i]">
+    [strokeColor]="colors[i % colors.length]">
     <agm-polyline-point [latitude]="place.lat" [longitude]="place.lng">
     </agm-polyline-point>
     <ng-container *ngIf="places[i+1]">
