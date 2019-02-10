@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ItineraryComponent implements OnInit {
 
-  @Input() places: any;
+  @Input() places: Array<any>;
   @Output() removePlace = new EventEmitter<any>();
 
   constructor() {

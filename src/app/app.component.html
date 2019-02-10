@@ -1,3 +1,6 @@
+<app-header [title]="title"></app-header>
+<app-itinerary [places]="places" (removePlace)=[onRemovePlace($event)]></app-itinerary>
+<app-map [center]="center" [places]="places" [colors]="colors"></app-map>
 
 <!-- <div class="container">
   <div class="jumbotron">
@@ -20,6 +23,3 @@
 <!-- <div class="map" [style.height.px]="300"> -->
 <!-- <agm-map [style.height.px]="map.offsetHeight" [latitude]="lat" [longitude]="lng"> -->
 
-<app-header [title]="title"></app-header>
-<app-itinerary [places]="places" (removePlace)=[onRemovePlace($event)]></app-itinerary>
-<app-map [center]="center" [places]="places" [colors]="colors"></app-map>

@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ViewChild, ElementRef, NgZone, } from '@angular/core';
+import { MapsAPILoader } from '@agm/core';
+// import { } from '@types/googlemaps';
+import { GooglePlaceDirective } from 'ngx-google-places-autocomplete/ngx-google-places-autocomplete.directive';
+// import { HttpClient } from '@angular/common/http';
+
+declare let google: any;
 
 @Component({
   selector: 'app-root',
@@ -9,23 +15,26 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
 
   title: string = 'TripPlanner';
+  @ViewChild('places') places: GooglePlaceDirective;
+  @ViewChild('search' ) public searchElement: ElementRef;
 
   // default to austin tx
-  center = {
+  center: { lat: number, lng: number } = {
     lat: 30.267153,
     lng: -97.7430608,  
   }
 
   // list of colors for lines between places
-  colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+  colors: Array<string> = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
 
   // list of places in itinerary
-  places = [
+  itinerary: Array<object> = [
     { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
     { name: 'New York, NY', lat: 40.7127, lng: -74.0059 },
   ];
 
-  constructor() {
+  constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone) {
+    //. make a nicer confirm dialog somehow
     if (navigator) {
       navigator.geolocation.getCurrentPosition(pos => {
         this.center = {
@@ -36,7 +45,17 @@ export class AppComponent {
     }
   }
 
-  onRemovePlace(placeIndex) {
-    this.places.splice(placeIndex, 1);
+  // public handleAddressChange(address: Address) {
+    public handleAddressChange(address) {
+    console.log(address.geometry.location.lng());
+    console.log(address.geometry.location.lat());
+    console.log(address.geometry.location.toJSON());
+    console.log(address.geometry.viewport.getNorthEast());
+    this.center.lat  = address.geometry.location.lat();
+    this.center.lng = address.geometry.location.lng();
+}  
+
+public onRemovePlace(placeIndex) {
+    this.itinerary.splice(placeIndex, 1);
   }
 }

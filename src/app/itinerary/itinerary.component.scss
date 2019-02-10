@@ -1,11 +1,9 @@
 // @import "~variables.scss";
-@import "../../variables.scss";
+@import "../../styles-variables.scss";
 
 .itinerary {
   font-size: 0.8em;
   padding: 0.5em;
-  // width: 30%; // set also in map.scss
-  // max-width: 15em;
   width: $sidebar-width;
 }
 .itinerary-title {
