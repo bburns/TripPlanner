@@ -13,11 +13,15 @@ export class ItineraryComponent implements OnInit {
   constructor() {
   }
 
-  onClickMe(placeIndex) {
+  onClickRemove(placeIndex) {
     let place = this.places[placeIndex];
     if (confirm(`Remove ${place.name} from itinerary?`)) {
       this.removePlace.emit(placeIndex);
     }
+  }
+
+  onClickAdd() {
+    alert("add");
   }
 
   ngOnInit() {

@@ -5,13 +5,10 @@
   <div class="itinerary-list list-group">
     <a href="#" class="list-group-item" *ngFor="let place of places; let i = index;">
       {{place.name}}
-      <a href="#" (click)="onClickMe(i)" class="itinerary-delete">x</a>
+      <a href="#" (click)="onClickRemove(i)" class="itinerary-delete">x</a>
     </a>
   </div>
-  <!-- <div class="itinerary-add">
-    <a href="#">
-      Add Place
-    </a>
-  </div> -->
-  <button type="button" class="btn btn-primary btn-block btn-lg">Add Place</button>
+  <button type="button" class="btn btn-primary btn-block btn-lg" (click)="onClickAdd()">
+    Add Place
+  </button>
 </div>
