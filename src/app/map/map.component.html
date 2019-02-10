@@ -3,7 +3,8 @@
   (mapClick)="onClickMap($event.coords.lat, $event.coords.lng)">
 
   <!-- show place markers -->
-  <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true">
+  <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng" 
+    [agmFitBounds]="true" (markerClick)="onClickMarker($event)">
     <agm-info-window>
       <div class="map-info-name">Börk</div>
       <a href="#" (click)="onClickAdd($event)">Add to itinerary</a>
