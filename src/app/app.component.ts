@@ -68,14 +68,16 @@ export class AppComponent {
     this.currentPlace = coords;
   }
 
-  public onAddPlace(placeId) {
-    alert('add place ' + placeId);
-    // this.itinerary.push(placeId);
+  public handleAddPlace(place) {
+    alert('add place ' + place);
+    this.itinerary.push(place);
   }
 
   public handleRemovePlace(place) {
     alert('remove place ' + JSON.stringify(place));
     //. find and remove given place
+    let i = this.itinerary.findIndex(p => p.name === place.name)
+    this.itinerary.splice(i, 1);
   }
 
   public setCurrentPlace(coords) {
