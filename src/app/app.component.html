@@ -1,7 +1,7 @@
 <app-header [title]="title"></app-header>
 <app-itinerary [places]="itinerary" (removePlace)=[onRemovePlace($event)]></app-itinerary>
 <app-map [center]="center" [places]="itinerary" [currentPlace]="currentPlace" [colors]="colors"
-(setCurrentPlace)="eventFromChild(coords)"
+(setCurrentPlace)="handleSetCurrentPlace($event)"
 >
 </app-map>
 <!-- [onClickMap]="ClickMap(placeId)"  -->

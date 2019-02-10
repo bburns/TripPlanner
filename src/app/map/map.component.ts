@@ -20,7 +20,7 @@ export class MapComponent implements OnInit {
 
   // user clicked on map - tell parent to set currentPlace
   _clickMap(lat: number, lng: number) {
-    alert("click map - set current place");
+    alert(`click map - set current place ${lat} ${lng}`);
     this.setCurrentPlace.emit({ lat, lng });
   }
   

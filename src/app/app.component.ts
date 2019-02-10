@@ -63,9 +63,9 @@ export class AppComponent {
     this.center.lng = address.geometry.location.lng();
   }
 
-  public eventFromChild(placeId) {
-    alert('click map ' + placeId);
-    // this.itinerary.push(placeId);
+  public handleSetCurrentPlace(coords) {
+    alert('click set current place ' + coords);
+    this.currentPlace = coords;
   }
 
   public onAddPlace(placeId) {
