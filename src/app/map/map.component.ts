@@ -14,6 +14,11 @@ export class MapComponent implements OnInit {
   constructor() {
   }
 
+  onClickMap(lat: number, lng: number) {
+    // this.places.push({ lat, lng, alpha: 0.4 });
+    alert("click map");
+  }
+  
   onClickAdd(placeId) {
     alert('add place ' + placeId);
   }

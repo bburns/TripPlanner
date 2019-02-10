@@ -1,5 +1,6 @@
 <!-- show google map -->
-<agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng">
+<agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng"
+  (mapClick)="onClickMap($event.coords.lat, $event.coords.lng)">
 
   <!-- show place markers -->
   <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true">
