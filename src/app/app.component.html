@@ -1,3 +1,3 @@
 <app-header [title]="title"></app-header>
 <app-itinerary [places]="itinerary" (removePlace)=[onRemovePlace($event)]></app-itinerary>
-<app-map [center]="center" [places]="itinerary" [colors]="colors"></app-map>
+<app-map [center]="center" [places]="itinerary" [currentPlace]="currentPlace" [colors]="colors"></app-map>

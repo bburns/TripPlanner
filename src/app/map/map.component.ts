@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MapComponent implements OnInit {
 
   @Input() center: any;
+  @Input() currentPlace: any;
   @Input() places: any;
   @Input() colors: any;
 
@@ -21,6 +22,7 @@ export class MapComponent implements OnInit {
     // this.places.push({ lat, lng, alpha: 0.4 });
   }
   
+  // might not need this
   onClickMarker(event) {
     alert("click marker");
     // this.selectedMarker = {
@@ -29,6 +31,7 @@ export class MapComponent implements OnInit {
     // };
   }
   
+  // user clicked on the Add place link in the infobox
   onClickAdd(placeId) {
     alert('add place ' + placeId);
   }

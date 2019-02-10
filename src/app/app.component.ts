@@ -14,13 +14,19 @@ export class AppComponent {
 
   title: string = 'TripPlanner';
   @ViewChild('places') places: GooglePlaceDirective;
-  @ViewChild('search' ) public searchElement: ElementRef;
+  @ViewChild('search') public searchElement: ElementRef;
 
   // default to austin tx
   center: { lat: number, lng: number } = {
     lat: 30.267153,
-    lng: -97.7430608,  
+    lng: -97.7430608,
   }
+
+  // spacex launch complex 40, cape canaveral FL
+  currentPlace: any = {
+    lat: 28.562106,
+    lng: -80.57718,
+  };
 
   // list of colors for lines between places
   colors: Array<string> = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
@@ -49,11 +55,11 @@ export class AppComponent {
     console.log(address.geometry.location.lat());
     console.log(address.geometry.location.toJSON());
     console.log(address.geometry.viewport.getNorthEast());
-    this.center.lat  = address.geometry.location.lat();
+    this.center.lat = address.geometry.location.lat();
     this.center.lng = address.geometry.location.lng();
-}  
+  }
 
-public onRemovePlace(placeIndex) {
+  public onRemovePlace(placeIndex) {
     this.itinerary.splice(placeIndex, 1);
   }
 }
