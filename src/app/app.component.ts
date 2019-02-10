@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
+import { Input, EventEmitter } from '@angular/core';
 import { ViewChild, ElementRef, NgZone, } from '@angular/core';
 import { MapsAPILoader } from '@agm/core';
-// import { } from '@types/googlemaps';
 import { GooglePlaceDirective } from 'ngx-google-places-autocomplete/ngx-google-places-autocomplete.directive';
-// import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
@@ -16,17 +16,21 @@ export class AppComponent {
   @ViewChild('places') places: GooglePlaceDirective;
   @ViewChild('search') public searchElement: ElementRef;
 
+  // @Input() setCurrentPlace: EventEmitter<any>;
+
   // default to austin tx
   center: { lat: number, lng: number } = {
     lat: 30.267153,
     lng: -97.7430608,
   }
 
-  // spacex launch complex 40, cape canaveral FL
-  currentPlace: any = {
-    lat: 28.562106,
-    lng: -80.57718,
-  };
+  currentPlace: any;
+
+  // // spacex launch complex 40, cape canaveral FL
+  // currentPlace: any = {
+  //   lat: 28.562106,
+  //   lng: -80.57718,
+  // };
 
   // list of colors for lines between places
   colors: Array<string> = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
@@ -39,14 +43,14 @@ export class AppComponent {
 
   constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone) {
     //. make a nicer confirm dialog somehow
-    if (navigator) {
-      navigator.geolocation.getCurrentPosition(pos => {
-        this.center = {
-          lat: +pos.coords.latitude,
-          lng: +pos.coords.longitude,
-        }
-      });
-    }
+    // if (navigator) {
+    //   navigator.geolocation.getCurrentPosition(pos => {
+    //     this.center = {
+    //       lat: +pos.coords.latitude,
+    //       lng: +pos.coords.longitude,
+    //     }
+    //   });
+    // }
   }
 
   // public handleAddressChange(address: Address) {
@@ -59,7 +63,27 @@ export class AppComponent {
     this.center.lng = address.geometry.location.lng();
   }
 
-  public onRemovePlace(placeIndex) {
-    this.itinerary.splice(placeIndex, 1);
+  public eventFromChild(placeId) {
+    alert('click map ' + placeId);
+    // this.itinerary.push(placeId);
   }
+
+  public onAddPlace(placeId) {
+    alert('add place ' + placeId);
+    // this.itinerary.push(placeId);
+  }
+
+  public onRemovePlace(placeId) {
+    alert('remove place ' + placeId);
+    // this.itinerary.push(placeId);
+  }
+
+  public setCurrentPlace(coords) {
+    alert("set current place " + coords)
+  }
+
+  // public setCurrentPlace({ lat, lng }) {
+  //   this.currentPlace = { lat, lng };
+  // }
+
 }

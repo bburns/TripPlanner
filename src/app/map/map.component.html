@@ -1,6 +1,6 @@
 <!-- show google map -->
 <agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng"
-  (mapClick)="onClickMap($event.coords.lat, $event.coords.lng)">
+  (mapClick)="_clickMap($event.coords.lat, $event.coords.lng)">
 
   <!-- show place markers -->
   <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true"
@@ -8,18 +8,20 @@
     <!-- (markerClick)="onClickMarker($event)" -->
     <agm-info-window>
       <div class="map-info-name">Börk</div>
-      <!-- <a href="#" (click)="onClickAdd($event)">Add to itinerary</a> -->
+      <!-- <a href="#" (click)="handleClickRemove($event)">Remove from itinerary</a> -->
     </agm-info-window>
   </agm-marker>
 
-  <!-- show current place marker -->
-  <agm-marker [latitude]="currentPlace.lat" [longitude]="currentPlace.lng" [agmFitBounds]="true"
-    (markerClick)="onClickCurrentPlace($event)" [markerDraggable]="true">
-    <agm-info-window>
-      <div class="map-info-name">(current place)</div>
-      <a href="#" (click)="onClickAdd($event)">Add to itinerary</a>
-    </agm-info-window>
-  </agm-marker>
+  <!-- show current place marker, if any -->
+  <ng-container *ngIf="currentPlace">
+    <agm-marker [latitude]="currentPlace.lat" [longitude]="currentPlace.lng" [agmFitBounds]="true"
+      (markerClick)="handleClickCurrentPlace($event)" [markerDraggable]="true">
+      <agm-info-window>
+        <div class="map-info-name">(current place)</div>
+        <!-- <a href="#" (click)="handleClickAdd($event)">Add to itinerary</a> -->
+      </agm-info-window>
+    </agm-marker>
+  </ng-container>
 
   <!-- show colored lines between place markers -->
   <!-- need to make a separate polyline between each pair of places to have different colors between them -->
