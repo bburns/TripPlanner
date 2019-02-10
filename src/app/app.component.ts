@@ -5,8 +5,6 @@ import { MapsAPILoader } from '@agm/core';
 import { GooglePlaceDirective } from 'ngx-google-places-autocomplete/ngx-google-places-autocomplete.directive';
 // import { HttpClient } from '@angular/common/http';
 
-declare let google: any;
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -46,7 +44,7 @@ export class AppComponent {
   }
 
   // public handleAddressChange(address: Address) {
-    public handleAddressChange(address) {
+  public handleAddressChange(address) {
     console.log(address.geometry.location.lng());
     console.log(address.geometry.location.lat());
     console.log(address.geometry.location.toJSON());
