@@ -19,17 +19,19 @@ export class MapComponent implements OnInit {
   }
 
   // user clicked on map - tell parent to set currentPlace
-// _clickMap(lat: number, lng: number) {
   _clickMap(coords) {
-    // alert(`click map - set current place ${coords}`);
-    this.setCurrentPlace.emit(coords);
+    let place = {
+      name: 'current place set via map click',
+      lat: coords.lat,
+      lng: coords.lng,
+    };
+    this.setCurrentPlace.emit(place);
   }
   
   // user clicked on the Add Place link in the infobox
   _clickAddPlace(coords) {
-    // alert('add place ' + JSON.stringify(coords));
     let place = {
-      name: '(uhhhh)',
+      name: 'place added via infobox',
       lat: coords.lat,
       lng: coords.lng,
     };
@@ -38,7 +40,6 @@ export class MapComponent implements OnInit {
 
   // user clicked on the Remove Place link in the infobox
   _clickRemovePlace(i) {
-    // alert('remove place ' + JSON.stringify(i));
     this.removePlace.emit(i);
   }
 

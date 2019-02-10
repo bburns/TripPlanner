@@ -42,8 +42,8 @@ export class AppComponent {
   //   // }
   // }
 
-  public handleSetCurrentPlace(coords) {
-    this.currentPlace = coords;
+  public handleSetCurrentPlace(place) {
+    this.currentPlace = place;
   }
 
   public handleAddPlace(place) {
