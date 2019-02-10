@@ -11,7 +11,12 @@ export class MapComponent implements OnInit {
   @Input() places: any;
   @Input() colors: any;
 
-  constructor() { }
+  constructor() {
+  }
+
+  onClickAdd(placeId) {
+    alert('add place ' + placeId);
+  }
 
   ngOnInit() {
   }

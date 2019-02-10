@@ -4,8 +4,8 @@
   <!-- show place markers -->
   <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true">
     <agm-info-window>
-      <div>Börk</div>
-      <a href="#">Add to itinerary</a>
+      <div class="map-info-name">Börk</div>
+      <a href="#" (click)="onClickAdd($event)">Add to itinerary</a>
     </agm-info-window>
   </agm-marker>
 

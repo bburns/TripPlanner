@@ -1,11 +1,14 @@
-@import "../../variables.scss";
+@import "../../variables.scss"; // for $sidebar-width
 
 agm-map {
   height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
-  // left: 30%; // set also in itinerary.scss
   left: $sidebar-width;
   right: 0;
+}
+
+.map-info-name {
+  font-weight: bold;
 }
