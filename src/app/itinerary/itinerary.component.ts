@@ -13,7 +13,7 @@ export class ItineraryComponent implements OnInit {
   constructor() {
   }
 
-  onClickRemove(placeIndex) {
+  _clickRemove(placeIndex) {
     let place = this.places[placeIndex];
     if (confirm(`Remove ${place.name} from itinerary?`)) {
       this.removePlace.emit(placeIndex);

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Input, EventEmitter } from '@angular/core';
+// import { Input, EventEmitter } from '@angular/core';
 import { ViewChild, ElementRef, NgZone, } from '@angular/core';
 import { MapsAPILoader } from '@agm/core';
 import { GooglePlaceDirective } from 'ngx-google-places-autocomplete/ngx-google-places-autocomplete.directive';
@@ -39,6 +39,7 @@ export class AppComponent {
   itinerary: Array<object> = [
     { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
     { name: 'New York, NY', lat: 40.7127, lng: -74.0059 },
+    { name: 'SpaceX Launch Complex 40, Cape Canaveral, FL', lat: 28.562106, lng: -80.57718 },
   ];
 
   constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone) {
@@ -73,10 +74,10 @@ export class AppComponent {
     this.itinerary.push(place);
   }
 
-  public handleRemovePlace(place) {
-    alert('remove place ' + JSON.stringify(place));
-    //. find and remove given place
-    let i = this.itinerary.findIndex(p => p.name === place.name)
+  public handleRemovePlace(i) {
+    alert('remove place ' + JSON.stringify(i));
+    // remove given place
+    // let i = this.itinerary.findIndex(p => p.name === place.name);
     this.itinerary.splice(i, 1);
   }
 

@@ -1,9 +1,9 @@
 <app-header [title]="title"></app-header>
-<app-itinerary [places]="itinerary" (removePlace)=[onRemovePlace($event)]></app-itinerary>
+<app-itinerary [places]="itinerary" (removePlace)=[handleRemovePlace($event)]></app-itinerary>
 <app-map [center]="center" [places]="itinerary" [currentPlace]="currentPlace" [colors]="colors"
-(setCurrentPlace)="handleSetCurrentPlace($event)"
-(removePlace)="handleRemovePlace($event)" 
-(addPlace)="handleAddPlace($event)" 
+  (setCurrentPlace)="handleSetCurrentPlace($event)"
+  (addPlace)="handleAddPlace($event)" 
+  (removePlace)="handleRemovePlace($event)" 
 >
 </app-map>
 <!-- [onClickMap]="ClickMap($event)"  -->

@@ -48,9 +48,9 @@ export class MapComponent implements OnInit {
   // }
 
   // user clicked on the Remove place link in the infobox
-  _clickRemove(place) {
-    alert('remove place ' + JSON.stringify(place));
-    this.removePlace.emit(place);
+  _clickRemove(i) {
+    alert('remove place ' + JSON.stringify(i));
+    this.removePlace.emit(i);
   }
 
   ngOnInit() {
