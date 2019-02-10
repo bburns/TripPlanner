@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   }
 
   _enterAddress(address) {
-    alert("place entered " + JSON.stringify(address));
+    // alert("place entered " + JSON.stringify(address));
     // console.log(address.geometry.location.lng());
     // console.log(address.geometry.location.lat());
     // console.log(address.geometry.location.toJSON());
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
       lat: address.geometry.location.lat(),
       lng: address.geometry.location.lng(),
     }
-    alert(JSON.stringify(place));
+    // alert(JSON.stringify(place));
     this.setCurrentPlace.emit(place);
   }
   

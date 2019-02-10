@@ -50,7 +50,7 @@ export class AppComponent {
     this.itinerary.push(place);
   }
 
-  public handleRemovePlace(i) {
+  public handleRemovePlace(i: number) {
     this.itinerary.splice(i, 1);
   }
 

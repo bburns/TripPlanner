@@ -29,12 +29,12 @@ export class MapComponent implements OnInit {
   }
   
   // user clicked on the Add Place link in the infobox
-  _clickAddPlace(coords) {
-    let place = {
-      name: 'place added via infobox',
-      lat: coords.lat,
-      lng: coords.lng,
-    };
+  _clickAddPlace(place) {
+    // let place = {
+    //   name: 'place added via infobox',
+    //   lat: coords.lat,
+    //   lng: coords.lng,
+    // };
     this.addPlace.emit(place);
   }
 
