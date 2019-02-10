@@ -43,7 +43,9 @@ export class AppComponent {
   // }
 
   public handleSetCurrentPlace(place) {
+    place.isNew = true;
     this.currentPlace = place;
+    // place.isNew = false;
   }
 
   public handleAddPlace(place) {

@@ -21,14 +21,13 @@ export class MapComponent implements OnInit {
   // user clicked on map - tell parent to set currentPlace
   _clickMap(coords) {
     let place = {
-      //. will get place name via geocoding
+      //. get place name via geocoding
       name: '(place set via map click)',
       lat: coords.lat,
       lng: coords.lng,
+      isNew: true,
     };
     this.setCurrentPlace.emit(place);
-    //. also open the infobox
-
   }
   
   // user clicked on the Add Place link in the infobox

@@ -5,7 +5,7 @@
   <!-- show place markers -->
   <agm-marker *ngFor="let place of places; let i=index" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true"
     [markerDraggable]="true">
-    <!-- add infobox -->
+    <!-- define infobox -->
     <agm-info-window #infoWindow>
       <div class="map-info-name">{{place.name}}</div>
       <a href="#" (click)="_clickRemovePlace(i, infoWindow)">Remove from itinerary</a>
@@ -16,11 +16,11 @@
   <ng-container *ngIf="currentPlace">
     <agm-marker [latitude]="currentPlace.lat" [longitude]="currentPlace.lng" [agmFitBounds]="true"
       [markerDraggable]="true">
-      <!-- add infobox -->
-      <agm-info-window>
+      <!-- define infobox -->
+      <!-- <agm-info-window [isOpen]="true"> -->
+      <agm-info-window [isOpen]="currentPlace.isNew">
         <div class="map-info-name">{{currentPlace.name}}</div>
         <a href="#" (click)="_clickAddPlace(currentPlace)">Add to itinerary</a>
-        <!-- <a href="#" (click)="_clickRemoveCurrentPlace(currentPlace)">Remove from map</a> -->
       </agm-info-window>
     </agm-marker>
   </ng-container>
