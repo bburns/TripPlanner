@@ -12,7 +12,7 @@ export class MapComponent implements OnInit {
   @Input() places: any;
   @Input() colors: any;
   @Output() setCurrentPlace = new EventEmitter<any>();
-  // @Output() addPlace = new EventEmitter<any>();
+  @Output() addPlace = new EventEmitter<any>();
   @Output() removePlace = new EventEmitter<any>();
 
   constructor() {
@@ -41,11 +41,16 @@ export class MapComponent implements OnInit {
   //   // };
   // }
   
-  // // user clicked on the Add place link in the infobox
-  // handleClickAdd(placeId) {
-  //   alert('add place ' + placeId);
-  //   this.addPlace.emit(placeId);
-  // }
+  // user clicked on the Add place link in the infobox
+  _clickAdd(coords) {
+    alert('add place ' + JSON.stringify(coords));
+    let place = {
+      name: '(uhhhh)',
+      lat: coords.lat,
+      lng: coords.lng,
+    };
+    this.addPlace.emit(place);
+  }
 
   // user clicked on the Remove place link in the infobox
   _clickRemove(i) {

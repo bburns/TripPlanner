@@ -65,28 +65,18 @@ export class AppComponent {
   }
 
   public handleSetCurrentPlace(coords) {
-    alert('click set current place ' + coords);
+    alert('click set current place ' + JSON.stringify(coords));
     this.currentPlace = coords;
   }
 
   public handleAddPlace(place) {
-    alert('add place ' + place);
+    alert('add place ' + JSON.stringify(place));
     this.itinerary.push(place);
   }
 
   public handleRemovePlace(i) {
     alert('remove place ' + JSON.stringify(i));
-    // remove given place
-    // let i = this.itinerary.findIndex(p => p.name === place.name);
     this.itinerary.splice(i, 1);
   }
-
-  public setCurrentPlace(coords) {
-    alert("set current place " + coords)
-  }
-
-  // public setCurrentPlace({ lat, lng }) {
-  //   this.currentPlace = { lat, lng };
-  // }
 
 }
