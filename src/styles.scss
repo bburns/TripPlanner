@@ -17,3 +17,10 @@ html, body {
 .row {
   height: 100%;
 }
+
+// need this so autocomplete input won't be blocked by bootstrap navbar
+// https://stackoverflow.com/questions/45854521/google-maps-places-autocomplete-with-a-modal-in-jhipster
+.pac-container {
+  z-index: 1054 !important;
+}
+
