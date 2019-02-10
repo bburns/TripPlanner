@@ -21,26 +21,25 @@ export class MapComponent implements OnInit {
   // user clicked on map - tell parent to set currentPlace
   _clickMap(coords) {
     let place = {
-      name: 'current place set via map click',
+      //. will get place name via geocoding
+      name: '(place set via map click)',
       lat: coords.lat,
       lng: coords.lng,
     };
     this.setCurrentPlace.emit(place);
+    //. also open the infobox
+
   }
   
   // user clicked on the Add Place link in the infobox
   _clickAddPlace(place) {
-    // let place = {
-    //   name: 'place added via infobox',
-    //   lat: coords.lat,
-    //   lng: coords.lng,
-    // };
     this.addPlace.emit(place);
   }
 
   // user clicked on the Remove Place link in the infobox
-  _clickRemovePlace(i) {
+  _clickRemovePlace(i, infoWindow) {
     this.removePlace.emit(i);
+    infoWindow.close();
   }
 
   ngOnInit() {
