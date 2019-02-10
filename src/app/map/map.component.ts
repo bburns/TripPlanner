@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  // @Input() lat: string;
-  // @Input() lng: string;
+  @Input() center: any;
   @Input() places: any;
   @Input() colors: any;
 

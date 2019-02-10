@@ -1,18 +1,16 @@
-<!-- <agm-map [latitude]="lat" [longitude]="lng"> -->
+<!-- show google map -->
+<agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng">
 
-<agm-map [fitBounds]="true">
-
-  <!-- show places -->
+  <!-- show place markers -->
   <agm-marker *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true">
+    <agm-info-window>
+      <div>Börk</div>
+      <a href="#">Add to itinerary</a>
+    </agm-info-window>
   </agm-marker>
 
-  <!-- show lines between places -->
-  <!-- <agm-polyline>
-    <agm-polyline-point *ngFor="let place of places" [latitude]="place.lat" [longitude]="place.lng">
-    </agm-polyline-point>
-  </agm-polyline> -->
-  <!-- [strokeColor]="place.color"> -->
-
+  <!-- show colored lines between place markers -->
+  <!-- need to make a separate polyline between each pair of places to have different colors between them -->
   <agm-polyline *ngFor="let place of places;let i = index;" [strokeOpacity]="0.5" [strokeWeight]="8"
     [strokeColor]="colors[i]">
     <agm-polyline-point [latitude]="place.lat" [longitude]="place.lng">
