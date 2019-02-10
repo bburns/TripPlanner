@@ -24,25 +24,8 @@ export class MapComponent implements OnInit {
     this.setCurrentPlace.emit({ lat, lng });
   }
   
-  // // might not need this
-  // handleClickMarker(event) {
-  //   alert("click marker");
-  //   // this.selectedMarker = {
-  //   //   lat: event.latitude,
-  //   //   lng: event.longitude
-  //   // };
-  // }
-  
-  // handleClickCurrentPlace(event) {
-  //   alert("click current marker");
-  //   // this.selectedMarker = {
-  //   //   lat: event.latitude,
-  //   //   lng: event.longitude
-  //   // };
-  // }
-  
-  // user clicked on the Add place link in the infobox
-  _clickAdd(coords) {
+  // user clicked on the Add Place link in the infobox
+  _clickAddPlace(coords) {
     alert('add place ' + JSON.stringify(coords));
     let place = {
       name: '(uhhhh)',
@@ -52,8 +35,8 @@ export class MapComponent implements OnInit {
     this.addPlace.emit(place);
   }
 
-  // user clicked on the Remove place link in the infobox
-  _clickRemove(i) {
+  // user clicked on the Remove Place link in the infobox
+  _clickRemovePlace(i) {
     alert('remove place ' + JSON.stringify(i));
     this.removePlace.emit(i);
   }
