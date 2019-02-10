@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "arttour-angular": {
+    "trip-planner": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/arttour-angular",
+            "outputPath": "dist/trip-planner",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "arttour-angular:build"
+            "browserTarget": "trip-planner:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "arttour-angular:build:production"
+              "browserTarget": "trip-planner:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "arttour-angular:build"
+            "browserTarget": "trip-planner:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "arttour-angular-e2e": {
+    "trip-planner-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "arttour-angular:serve"
+            "devServerTarget": "trip-planner:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "arttour-angular:serve:production"
+              "devServerTarget": "trip-planner:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "arttour-angular"
+  "defaultProject": "trip-planner"
 }
