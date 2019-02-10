@@ -2,8 +2,8 @@
 <app-itinerary [places]="itinerary" (removePlace)=[onRemovePlace($event)]></app-itinerary>
 <app-map [center]="center" [places]="itinerary" [currentPlace]="currentPlace" [colors]="colors"
 (setCurrentPlace)="handleSetCurrentPlace($event)"
+(removePlace)="handleRemovePlace($event)" 
 >
 </app-map>
-<!-- [onClickMap]="ClickMap(placeId)"  -->
-<!-- [onClickRemove]="onClickRemove(placeId)"  -->
-<!-- [onClickAdd]="onClickAdd(placeId)"  -->
+<!-- [onClickMap]="ClickMap($event)"  -->
+<!-- (addPlace)="handleClickAdd($event)"  -->

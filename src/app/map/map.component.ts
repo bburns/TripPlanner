@@ -13,7 +13,7 @@ export class MapComponent implements OnInit {
   @Input() colors: any;
   @Output() setCurrentPlace = new EventEmitter<any>();
   // @Output() addPlace = new EventEmitter<any>();
-  // @Output() removePlace = new EventEmitter<any>();
+  @Output() removePlace = new EventEmitter<any>();
 
   constructor() {
   }
@@ -47,11 +47,11 @@ export class MapComponent implements OnInit {
   //   this.addPlace.emit(placeId);
   // }
 
-  // // user clicked on the Remove place link in the infobox
-  // handleClickRemove(placeId) {
-  //   alert('remove place ' + placeId);
-  //   this.removePlace.emit(placeId);
-  // }
+  // user clicked on the Remove place link in the infobox
+  _clickRemove(place) {
+    alert('remove place ' + JSON.stringify(place));
+    this.removePlace.emit(place);
+  }
 
   ngOnInit() {
   }

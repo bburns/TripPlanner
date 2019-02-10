@@ -73,9 +73,9 @@ export class AppComponent {
     // this.itinerary.push(placeId);
   }
 
-  public onRemovePlace(placeId) {
-    alert('remove place ' + placeId);
-    // this.itinerary.push(placeId);
+  public handleRemovePlace(place) {
+    alert('remove place ' + JSON.stringify(place));
+    //. find and remove given place
   }
 
   public setCurrentPlace(coords) {
