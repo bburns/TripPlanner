@@ -1,6 +1,6 @@
 <!-- show google map -->
 <agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng"
-  (mapClick)="_clickMap($event.coords.lat, $event.coords.lng)">
+  (mapClick)="_clickMap($event.coords)">
 
   <!-- show place markers -->
   <agm-marker *ngFor="let place of places; let i=index" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true"
@@ -18,6 +18,7 @@
       <agm-info-window>
         <div class="map-info-name">(current place)</div>
         <a href="#" (click)="_clickAddPlace(currentPlace)">Add to itinerary</a>
+        <!-- <a href="#" (click)="_clickRemoveCurrentPlace(currentPlace)">Remove from map</a> -->
       </agm-info-window>
     </agm-marker>
   </ng-container>

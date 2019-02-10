@@ -65,17 +65,17 @@ export class AppComponent {
   }
 
   public handleSetCurrentPlace(coords) {
-    alert('click set current place ' + JSON.stringify(coords));
+    // alert('click set current place ' + JSON.stringify(coords));
     this.currentPlace = coords;
   }
 
   public handleAddPlace(place) {
-    alert('add place ' + JSON.stringify(place));
+    // alert('add place ' + JSON.stringify(place));
     this.itinerary.push(place);
   }
 
   public handleRemovePlace(i) {
-    alert('remove place ' + JSON.stringify(i));
+    // alert('remove place ' + JSON.stringify(i));
     this.itinerary.splice(i, 1);
   }
 
