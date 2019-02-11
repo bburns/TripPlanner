@@ -20,10 +20,12 @@ export class AppComponent {
   }
 
   // list of places in itinerary
-  itinerary: Array<object> = [
-    { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
-    { name: 'New York, NY', lat: 40.7127, lng: -74.0059 },
-    { name: 'SpaceX Launch Complex 40, Cape Canaveral, FL', lat: 28.562106, lng: -80.57718 },
+  // note: calling this `itinerary` here instead of `places` because `places` conflicts with some angular thing
+  // itinerary: Array<object> = [
+  places: Array<object> = [
+    // { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
+    // { name: 'New York, NY', lat: 40.7127, lng: -74.0059 },
+    // { name: 'SpaceX Launch Complex 40, Cape Canaveral, FL', lat: 28.562106, lng: -80.57718 },
     // { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
   ];
 
@@ -44,20 +46,16 @@ export class AppComponent {
   //   // }
   // }
 
-  public handleSetCurrentPlace(place) {
-    place.isNew = true;
+  public handleSetCurrentPlace(place: any) {
     this.currentPlace = place;
-    // place.isNew = false;
   }
 
-  public handleAddPlace(place) {
-    this.itinerary.push(place);
+  public handleAddPlace(place: any) {
+    this.places.push(place);
   }
 
   public handleRemovePlace(i: number) {
-    this.itinerary.splice(i, 1);
-    // this.itinerary = [...this.itinerary.slice(0, i), ...this.itinerary.slice(i+1)];
-    // this.itinerary = [...this.itinerary]; // make copy
+    this.places.splice(i, 1);
   }
 
 }

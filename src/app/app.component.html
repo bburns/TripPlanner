@@ -1,6 +1,6 @@
 <app-header [title]="title" (addPlace)="handleAddPlace($event)"></app-header>
-<app-itinerary [places]="itinerary" (removePlace)=[handleRemovePlace($event)]></app-itinerary>
-<app-map [center]="center" [places]="itinerary" [currentPlace]="currentPlace" [colors]="colors"
+<app-itinerary [places]="places" (removePlace)=[handleRemovePlace($event)]></app-itinerary>
+<app-map [center]="center" [places]="places" [currentPlace]="currentPlace" [colors]="colors"
   (setCurrentPlace)="handleSetCurrentPlace($event)"
   (addPlace)="handleAddPlace($event)" 
   (removePlace)="handleRemovePlace($event)" 
