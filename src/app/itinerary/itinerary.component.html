@@ -4,16 +4,22 @@
     Itinerary
   </div>
   
+  <!-- show list of itinerary items in a drag-drop list -->
   <div class="itinerary-list list-group" cdkDropList (cdkDropListDropped)="_dropItem($event)">
+
+    <!-- define each item. each is draggable along the y axis -->
     <a href="#" class="list-group-item" *ngFor="let place of places; let i = index;" cdkDrag cdkDragLockAxis="y">
       {{place.name}}
-      <!-- <div *cdkDragPlaceholder>pokpok</div> -->
-      <div class="list-group-item" *cdkDragPreview>{{place.name}}</div>
-      <!-- <a href="#" (click)="_clickRemove(i)" class="itinerary-delete">x</a> -->
+
+      <!-- show close button -->
       <button type="button" class="close" aria-label="Close" (click)="_clickRemove(i)">
         <span aria-hidden="true">&times;</span>
       </button>
+
+      <!-- how to show item during drag -->
+      <div class="list-group-item" *cdkDragPreview>{{place.name}}</div>
     </a>
+
   </div>
 
 </div>

@@ -12,7 +12,6 @@ import { GooglePlaceDirective } from 'ngx-google-places-autocomplete/ngx-google-
 export class HeaderComponent {
 
   @Input() title: string;
-  // @Output() setCurrentPlace = new EventEmitter<any>();
   @Output() addPlace = new EventEmitter<any>();
   @ViewChild('places') places: GooglePlaceDirective;
   @ViewChild('search') public searchElement: ElementRef;
@@ -24,7 +23,6 @@ export class HeaderComponent {
       lat: address.geometry.location.lat(),
       lng: address.geometry.location.lng(),
     }
-    // this.setCurrentPlace.emit(place);
     this.addPlace.emit(place);
   }
   

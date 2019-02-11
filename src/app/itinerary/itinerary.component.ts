@@ -13,10 +13,10 @@ export class ItineraryComponent {
   @Input() places: Array<any>;
   @Output() removePlace = new EventEmitter<any>();
 
-  _clickRemove(placeIndex) {
-    let place = this.places[placeIndex];
+  _clickRemove(i: number) {
+    let place = this.places[i];
     if (confirm(`Remove ${place.name} from itinerary?`)) {
-      this.removePlace.emit(placeIndex);
+      this.removePlace.emit(i);
     }
   }
 
