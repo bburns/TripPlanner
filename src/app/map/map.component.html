@@ -1,7 +1,7 @@
 <!-- show google map -->
 <agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng" (mapClick)="_clickMap($event.coords)">
 
-  <!-- show place markers -->
+  <!-- show all place markers -->
   <agm-marker *ngFor="let place of places; let i=index" [latitude]="place.lat" [longitude]="place.lng"
     [agmFitBounds]="true" [markerDraggable]="true">
     <!-- define infobox -->
