@@ -7,7 +7,10 @@
       {{place.name}}
       <!-- <div *cdkDragPlaceholder>pokpok</div> -->
       <div class="list-group-item" *cdkDragPreview>{{place.name}}</div>
-      <a href="#" (click)="_clickRemove(i)" class="itinerary-delete">x</a>
+      <!-- <a href="#" (click)="_clickRemove(i)" class="itinerary-delete">x</a> -->
+      <button type="button" class="close" aria-label="Close" (click)="_clickRemove(i)">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </a>
   </div>
   <!-- <button type="button" class="btn btn-primary btn-block btn-lg" (click)="onClickAdd()">
