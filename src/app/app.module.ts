@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
       libraries: ['places'], // needed for autocomplete
     }),
     GooglePlaceModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
