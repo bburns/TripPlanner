@@ -22,8 +22,7 @@ export class ItineraryComponent implements OnInit {
   }
 
   _dropItem(event: CdkDragDrop<string[]>) {
-    // alert("dropped " + JSON.stringify(event.previousIndex));
-    // moveItemInArray(this.artists, event.previousIndex, event.currentIndex);  
+    moveItemInArray(this.places, event.previousIndex, event.currentIndex);  
   }
 
   onClickAdd() {
