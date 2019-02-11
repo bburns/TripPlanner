@@ -5,6 +5,8 @@
   <div class="itinerary-list list-group" cdkDropList  (cdkDropListDropped)="_dropItem($event)">
     <a href="#" class="list-group-item" *ngFor="let place of places; let i = index;" cdkDrag cdkDragLockAxis="y">
       {{place.name}}
+      <!-- <div *cdkDragPlaceholder>pokpok</div> -->
+      <div class="list-group-item" *cdkDragPreview>{{place.name}}</div>
       <a href="#" (click)="_clickRemove(i)" class="itinerary-delete">x</a>
     </a>
   </div>
