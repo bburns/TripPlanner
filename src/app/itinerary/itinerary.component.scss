@@ -16,3 +16,8 @@
 .itinerary-delete {
   float: right;
 }
+
+// animate items as they're being sorted
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
