@@ -12,7 +12,7 @@ import { Place, LatLng } from 'types';
 export class MapComponent {
 
   @Input() center: LatLng;
-  @Input() currentPlace: any;
+  @Input() currentPlace: Place;
   @Input() places: Array<Place>;
   @Input() colors: Array<string>;
   @Output() setCurrentPlace = new EventEmitter<any>();

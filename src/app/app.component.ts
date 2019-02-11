@@ -19,7 +19,7 @@ export class AppComponent {
   center: LatLng = { lat: 30.267153, lng: -97.7430608 }; // austin tx
 
   // current marker on map
-  currentPlace: any;
+  currentPlace: Place;
 
   // list of places in itinerary
   places: Array<Place> = [

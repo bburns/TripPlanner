@@ -16,8 +16,8 @@
     <agm-marker [latitude]="currentPlace.lat" [longitude]="currentPlace.lng" [agmFitBounds]="true"
       [markerDraggable]="true">
       <!-- define infobox -->
-      <!-- <agm-info-window [isOpen]="true"> -->
-      <agm-info-window [isOpen]="currentPlace.isNew" #infoWindow>
+      <agm-info-window [isOpen]="true" #infoWindow>
+      <!-- <agm-info-window [isOpen]="currentPlace.isNew" #infoWindow> -->
         <div class="map-info-name">{{currentPlace.name}}</div>
         <a href="#" (click)="handleClickAddPlace(currentPlace, infoWindow)">Add to itinerary</a>
       </agm-info-window>
