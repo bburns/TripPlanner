@@ -1,5 +1,5 @@
 <!-- show google map -->
-<agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng" (mapClick)="_clickMap($event.coords)">
+<agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng" (mapClick)="handleClickMap($event.coords)">
 
   <!-- show all place markers -->
   <agm-marker *ngFor="let place of places; let i=index" [latitude]="place.lat" [longitude]="place.lng"
@@ -7,7 +7,7 @@
     <!-- define infobox -->
     <agm-info-window #infoWindow>
       <div class="map-info-name">{{place.name}}</div>
-      <a href="#" (click)="_clickRemovePlace(i, infoWindow)">Remove from itinerary</a>
+      <a href="#" (click)="handleClickRemovePlace(i, infoWindow)">Remove from itinerary</a>
     </agm-info-window>
   </agm-marker>
 
@@ -19,7 +19,7 @@
       <!-- <agm-info-window [isOpen]="true"> -->
       <agm-info-window [isOpen]="currentPlace.isNew" #infoWindow>
         <div class="map-info-name">{{currentPlace.name}}</div>
-        <a href="#" (click)="_clickAddPlace(currentPlace, infoWindow)">Add to itinerary</a>
+        <a href="#" (click)="handleClickAddPlace(currentPlace, infoWindow)">Add to itinerary</a>
       </agm-info-window>
     </agm-marker>
   </ng-container>

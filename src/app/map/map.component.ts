@@ -17,8 +17,9 @@ export class MapComponent {
   @Output() addPlace = new EventEmitter<any>();
   @Output() removePlace = new EventEmitter<any>();
 
+
   // user clicked on map - tell parent to set currentPlace
-  _clickMap(coords) {
+  handleClickMap(coords) {
     let place = {
       //. get place name via geocoding
       name: '(place set via map click)',
@@ -30,13 +31,13 @@ export class MapComponent {
   }
   
   // user clicked on the Add Place link in the infobox
-  _clickAddPlace(place, infoWindow) {
+  handleClickAddPlace(place, infoWindow) {
     this.addPlace.emit(place);
     infoWindow.close();
   }
 
   // user clicked on the Remove Place link in the infobox
-  _clickRemovePlace(i, infoWindow) {
+  handleClickRemovePlace(i, infoWindow) {
     this.removePlace.emit(i);
     infoWindow.close();
   }

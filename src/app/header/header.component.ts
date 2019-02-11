@@ -16,7 +16,8 @@ export class HeaderComponent {
   @ViewChild('places') places: GooglePlaceDirective;
   @ViewChild('search') public searchElement: ElementRef;
 
-  _enterAddress(address) {
+
+  handleEnterPlace(address) {
     // alert("place entered " + JSON.stringify(address));
     let place = {
       name: address.address_components[0].long_name,

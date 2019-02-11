@@ -13,14 +13,15 @@ export class ItineraryComponent {
   @Input() places: Array<any>;
   @Output() removePlace = new EventEmitter<any>();
 
-  _clickRemove(i: number) {
+
+  handleClickRemove(i: number) {
     let place = this.places[i];
     if (confirm(`Remove ${place.name} from itinerary?`)) {
       this.removePlace.emit(i);
     }
   }
 
-  _dropItem(event: CdkDragDrop<string[]>) {
+  handleDropItem(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.places, event.previousIndex, event.currentIndex);  
   }
 

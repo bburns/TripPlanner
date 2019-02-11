@@ -13,26 +13,22 @@ export class AppComponent {
 
   title: string = 'TripPlanner';
 
-  // default to austin tx
-  center: { lat: number, lng: number } = {
-    lat: 30.267153,
-    lng: -97.7430608,
-  }
+  // center of map
+  center: any = { lat: 30.267153, lng: -97.7430608 }; // austin tx
+
+  // current marker on map
+  currentPlace: any;
 
   // list of places in itinerary
-  // note: calling this `itinerary` here instead of `places` because `places` conflicts with some angular thing
-  // itinerary: Array<object> = [
   places: Array<object> = [
-    // { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
-    // { name: 'New York, NY', lat: 40.7127, lng: -74.0059 },
-    // { name: 'SpaceX Launch Complex 40, Cape Canaveral, FL', lat: 28.562106, lng: -80.57718 },
-    // { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
+    { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
+    { name: 'New York, NY', lat: 40.7127, lng: -74.0059 },
+    { name: 'SpaceX Launch Complex 40, Cape Canaveral, FL', lat: 28.562106, lng: -80.57718 },
   ];
-
-  currentPlace: any;
 
   // list of colors for lines between places
   colors: Array<string> = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+
 
   // constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone) {
   //   //. make a nicer confirm dialog somehow

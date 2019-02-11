@@ -5,14 +5,14 @@
   </div>
   
   <!-- show list of itinerary items in a drag-drop list -->
-  <div class="itinerary-list list-group" cdkDropList (cdkDropListDropped)="_dropItem($event)">
+  <div class="itinerary-list list-group" cdkDropList (cdkDropListDropped)="handleDropItem($event)">
 
     <!-- define each item. each is draggable along the y axis -->
     <a href="#" class="list-group-item" *ngFor="let place of places; let i = index;" cdkDrag cdkDragLockAxis="y">
       {{place.name}}
 
       <!-- show close button -->
-      <button type="button" class="close" aria-label="Close" (click)="_clickRemove(i)">
+      <button type="button" class="close" aria-label="Close" (click)="handleClickRemove(i)">
         <span aria-hidden="true">&times;</span>
       </button>
 
