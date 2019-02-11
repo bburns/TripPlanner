@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+// import { NgZone } from '@angular/core';
 // import { MapsAPILoader } from '@agm/core';
-// import { ViewChild, ElementRef, NgZone } from '@angular/core';
 
 
 @Component({
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
 
   title: string = 'TripPlanner';

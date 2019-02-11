@@ -1,7 +1,9 @@
 <div class="itinerary">
+
   <div class="itinerary-title well well-sm">
     Itinerary
   </div>
+  
   <div class="itinerary-list list-group" cdkDropList (cdkDropListDropped)="_dropItem($event)">
     <a href="#" class="list-group-item" *ngFor="let place of places; let i = index;" cdkDrag cdkDragLockAxis="y">
       {{place.name}}
@@ -13,7 +15,5 @@
       </button>
     </a>
   </div>
-  <!-- <button type="button" class="btn btn-primary btn-block btn-lg" (click)="onClickAdd()">
-    Add Place
-  </button> -->
+
 </div>

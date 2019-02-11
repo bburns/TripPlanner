@@ -1,11 +1,13 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
+
+export class MapComponent {
 
   @Input() center: any;
   @Input() currentPlace: any;
@@ -15,9 +17,6 @@ export class MapComponent implements OnInit {
   @Output() addPlace = new EventEmitter<any>();
   @Output() removePlace = new EventEmitter<any>();
 
-  constructor() {
-  }
-
   // user clicked on map - tell parent to set currentPlace
   _clickMap(coords) {
     let place = {
@@ -25,7 +24,7 @@ export class MapComponent implements OnInit {
       name: '(place set via map click)',
       lat: coords.lat,
       lng: coords.lng,
-      isNew: true,
+      isNew: true, //. trying to force infowindow open
     };
     this.setCurrentPlace.emit(place);
   }
@@ -40,9 +39,6 @@ export class MapComponent implements OnInit {
   _clickRemovePlace(i, infoWindow) {
     this.removePlace.emit(i);
     infoWindow.close();
-  }
-
-  ngOnInit() {
   }
 
 }

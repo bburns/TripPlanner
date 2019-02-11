@@ -1,18 +1,17 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+
 
 @Component({
   selector: 'app-itinerary',
   templateUrl: './itinerary.component.html',
   styleUrls: ['./itinerary.component.scss']
 })
-export class ItineraryComponent implements OnInit {
+
+export class ItineraryComponent {
 
   @Input() places: Array<any>;
   @Output() removePlace = new EventEmitter<any>();
-
-  constructor() {
-  }
 
   _clickRemove(placeIndex) {
     let place = this.places[placeIndex];
@@ -23,13 +22,6 @@ export class ItineraryComponent implements OnInit {
 
   _dropItem(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.places, event.previousIndex, event.currentIndex);  
-  }
-
-  onClickAdd() {
-    alert("add");
-  }
-
-  ngOnInit() {
   }
 
 }
