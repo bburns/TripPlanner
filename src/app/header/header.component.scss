@@ -1,5 +1,4 @@
 
-
 // bootstrap is setting these to 15px for the anchor, making the header too tall and messing up
 // the divs below.
 .navbar-nav > li a {
@@ -7,8 +6,12 @@
   padding-bottom: 10px;
 }
 
-.logo {
+.header-logo {
   width: 32px;
   height: 32px;
   margin-right: 8px;
+}
+
+.header-input {
+  margin: 8px;
 }

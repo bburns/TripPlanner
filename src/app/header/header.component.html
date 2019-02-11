@@ -1,13 +1,20 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
 
   <ul class="nav navbar-nav pull-left">
-    <li class="active"><a href="#"><img class="logo" src="favicon.ico" />{{title}}</a></li>
+    <li class="active">
+      <a href="#">
+        <img class="header-logo" src="favicon.ico" />{{title}}</a>
+    </li>
   </ul>
 
-  <input class="header-input" placeholder="Search for place" ngx-google-places-autocomplete #placesRef="ngx-places" 
-    (onAddressChange)="_enterAddress($event)" />
+  <form class="form-inline">
+      <!-- <input class="form-control" placeholder="lasldnakj sndk" /> -->
+    <input class="header-input form-control" placeholder="Search for place" ngx-google-places-autocomplete
+      #placesRef="ngx-places" (onAddressChange)="_enterAddress($event)"
+      size="40" />
+  </form>
 
-  <!-- <ul class="nav navbar-nav pull-right">
+    <!-- <ul class="nav navbar-nav pull-right">
     <li class=""><a href="#about">About</a></li>
   </ul> -->
 
