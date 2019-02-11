@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-itinerary',
@@ -18,6 +19,11 @@ export class ItineraryComponent implements OnInit {
     if (confirm(`Remove ${place.name} from itinerary?`)) {
       this.removePlace.emit(placeIndex);
     }
+  }
+
+  _dropItem(event: CdkDragDrop<string[]>) {
+    // alert("dropped " + JSON.stringify(event.previousIndex));
+    // moveItemInArray(this.artists, event.previousIndex, event.currentIndex);  
   }
 
   onClickAdd() {
