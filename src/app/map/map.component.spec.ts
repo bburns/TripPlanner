@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MapComponent } from './map.component';
+import { AgmCoreModule } from '@agm/core';
+// import { AgmMap, AgmMarker, AgmInfoWindow, AgmPolyline, AgmPolylinePoint } from '@agm/core';
+
 
 describe('MapComponent', () => {
   let component: MapComponent;
@@ -8,7 +11,15 @@ describe('MapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MapComponent ]
+      declarations: [
+        MapComponent,
+      ],
+      imports: [
+        AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyB0qUaK55LTdIG4WHJYjWHjLJJZsnIl9rY', // google maps api key - also set in index.html
+          libraries: ['places'], // needed for autocomplete
+        }),
+      ],
     })
     .compileComponents();
   }));

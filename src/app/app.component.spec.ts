@@ -6,6 +6,8 @@ import { MapComponent } from './map/map.component';
 import { ItineraryComponent } from './itinerary/itinerary.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { AgmCoreModule } from '@agm/core';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -18,6 +20,12 @@ describe('AppComponent', () => {
         ItineraryComponent,
         FooterComponent,
       ],
+      imports: [
+        AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyB0qUaK55LTdIG4WHJYjWHjLJJZsnIl9rY', // google maps api key - also set in index.html
+          libraries: ['places'], // needed for autocomplete
+        }),    
+      ]
     }).compileComponents();
   }));
 

@@ -3,7 +3,8 @@
 
   <!-- show all place markers -->
   <agm-marker *ngFor="let place of places; let i=index" [latitude]="place.lat" [longitude]="place.lng"
-    [agmFitBounds]="true" [markerDraggable]="true">
+    [agmFitBounds]="true" 
+    [markerDraggable]="true">
     <!-- define infobox -->
     <agm-info-window #infoWindow>
       <div class="map-info-name">{{place.name}}</div>
@@ -13,7 +14,8 @@
 
   <!-- show current place marker, if any -->
   <ng-container *ngIf="currentPlace">
-    <agm-marker [latitude]="currentPlace.lat" [longitude]="currentPlace.lng" [agmFitBounds]="true"
+    <agm-marker [latitude]="currentPlace.lat" [longitude]="currentPlace.lng"
+      [agmFitBounds]="true"
       [markerDraggable]="true">
       <!-- define infobox -->
       <agm-info-window [isOpen]="true" #infoWindow>

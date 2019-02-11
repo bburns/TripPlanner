@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 // import { NgZone } from '@angular/core';
 // import { MapsAPILoader } from '@agm/core';
 
-import { Place, LatLng } from 'types';
+import { Place, LatLng } from '../types';
 
 
 @Component({
