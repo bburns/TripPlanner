@@ -9,10 +9,11 @@
 
   <form class="form-inline">
     <input class="header-input form-control" placeholder="Add a place" ngx-google-places-autocomplete
-      #placesRef="ngx-places" (onAddressChange)="handleEnterPlace($event)" size="40" />
+      (onAddressChange)="handleEnterPlace($event)" size="40" />
+      <!-- #placesRef="ngx-places"  -->
   </form>
 
-    <!-- <ul class="nav navbar-nav pull-right">
+  <!-- <ul class="nav navbar-nav pull-right">
     <li class=""><a href="#about">About</a></li>
   </ul> -->
 

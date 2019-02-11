@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 // import { NgZone } from '@angular/core';
 // import { MapsAPILoader } from '@agm/core';
 
+import { Place, LatLng } from 'types';
+
 
 @Component({
   selector: 'app-root',
@@ -14,13 +16,13 @@ export class AppComponent {
   title: string = 'TripPlanner';
 
   // center of map
-  center: any = { lat: 30.267153, lng: -97.7430608 }; // austin tx
+  center: LatLng = { lat: 30.267153, lng: -97.7430608 }; // austin tx
 
   // current marker on map
   currentPlace: any;
 
   // list of places in itinerary
-  places: Array<object> = [
+  places: Array<Place> = [
     { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
     { name: 'New York, NY', lat: 40.7127, lng: -74.0059 },
     { name: 'SpaceX Launch Complex 40, Cape Canaveral, FL', lat: 28.562106, lng: -80.57718 },
@@ -42,11 +44,11 @@ export class AppComponent {
   //   // }
   // }
 
-  public handleSetCurrentPlace(place: any) {
+  public handleSetCurrentPlace(place: Place) {
     this.currentPlace = place;
   }
 
-  public handleAddPlace(place: any) {
+  public handleAddPlace(place: Place) {
     this.places.push(place);
   }
 

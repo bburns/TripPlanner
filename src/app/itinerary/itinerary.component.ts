@@ -1,6 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
+import { Place } from 'types';
+
 
 @Component({
   selector: 'app-itinerary',
@@ -10,7 +12,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 export class ItineraryComponent {
 
-  @Input() places: Array<any>;
+  @Input() places: Array<Place>;
   @Output() removePlace = new EventEmitter<any>();
 
 
