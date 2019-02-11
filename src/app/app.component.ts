@@ -23,6 +23,7 @@ export class AppComponent {
     { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
     { name: 'New York, NY', lat: 40.7127, lng: -74.0059 },
     { name: 'SpaceX Launch Complex 40, Cape Canaveral, FL', lat: 28.562106, lng: -80.57718 },
+    { name: 'Austin, TX', lat: 30.267153, lng: -97.7430608 },
   ];
 
   currentPlace: any;
@@ -54,6 +55,8 @@ export class AppComponent {
 
   public handleRemovePlace(i: number) {
     this.itinerary.splice(i, 1);
+    // this.itinerary = [...this.itinerary.slice(0, i), ...this.itinerary.slice(i+1)];
+    // this.itinerary = [...this.itinerary]; // make copy
   }
 
 }

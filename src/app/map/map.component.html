@@ -1,10 +1,9 @@
 <!-- show google map -->
-<agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng"
-  (mapClick)="_clickMap($event.coords)">
+<agm-map [fitBounds]="true" [latitude]="center.lat" [longitude]="center.lng" (mapClick)="_clickMap($event.coords)">
 
   <!-- show place markers -->
-  <agm-marker *ngFor="let place of places; let i=index" [latitude]="place.lat" [longitude]="place.lng" [agmFitBounds]="true"
-    [markerDraggable]="true">
+  <agm-marker *ngFor="let place of places; let i=index" [latitude]="place.lat" [longitude]="place.lng"
+    [agmFitBounds]="true" [markerDraggable]="true">
     <!-- define infobox -->
     <agm-info-window #infoWindow>
       <div class="map-info-name">{{place.name}}</div>
@@ -18,9 +17,9 @@
       [markerDraggable]="true">
       <!-- define infobox -->
       <!-- <agm-info-window [isOpen]="true"> -->
-      <agm-info-window [isOpen]="currentPlace.isNew">
+      <agm-info-window [isOpen]="currentPlace.isNew" #infoWindow>
         <div class="map-info-name">{{currentPlace.name}}</div>
-        <a href="#" (click)="_clickAddPlace(currentPlace)">Add to itinerary</a>
+        <a href="#" (click)="_clickAddPlace(currentPlace, infoWindow)">Add to itinerary</a>
       </agm-info-window>
     </agm-marker>
   </ng-container>
@@ -29,6 +28,7 @@
   <!-- need to make a separate polyline between each pair of places to have different colors between them -->
   <agm-polyline *ngFor="let place of places;let i = index;" [strokeOpacity]="0.5" [strokeWeight]="8"
     [strokeColor]="colors[i % colors.length]">
+    <!-- id={{place.lat}} -->
     <agm-polyline-point [latitude]="place.lat" [longitude]="place.lng">
     </agm-polyline-point>
     <ng-container *ngIf="places[i+1]">

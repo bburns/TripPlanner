@@ -31,8 +31,9 @@ export class MapComponent implements OnInit {
   }
   
   // user clicked on the Add Place link in the infobox
-  _clickAddPlace(place) {
+  _clickAddPlace(place, infoWindow) {
     this.addPlace.emit(place);
+    infoWindow.close();
   }
 
   // user clicked on the Remove Place link in the infobox
