@@ -1,0 +1,51 @@
+.nav-menu {
+  font-size: 1rem; /* otherwise inherits size of nav item, which could be large etc */
+}
+
+.nav-menu-button img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* margin-right: 4px; */
+  cursor: pointer;
+}
+
+.nav-menu-contents {
+  width: 10em;
+  position: fixed;
+  left: 14em;
+  font-weight: normal;
+  background-color: #eee;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+  transition: 0.4s;
+  border: 1px solid gray;
+}
+
+.nav-menu-contents div {
+  padding: 3px 4px;
+}
+
+.nav-menu-contents a {
+  border: none; /* border-bottom looks bad */
+  color: #333;
+}
+
+.nav-menu-contents div:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+
+/* 
+.nav-menu-close {
+  font-size: 1.2em;
+  color: #333;
+  margin: 6px 0 0 2px;
+  padding: 0 6px;
+  cursor: pointer;
+}
+.nav-menu-close:hover {
+  background: #ddd;
+} */

@@ -1,0 +1,47 @@
+/* see also page.css, which overrides some of these */
+
+.markdown {
+  max-width: 780px;
+}
+
+.markdown p {
+  display: inline;
+}
+
+.markdown .first {
+  display: inline;
+}
+.markdown .second {
+  display: inline;
+}
+
+.markdown .more {
+  cursor: pointer;
+  /* color: #ffc080; */
+  color: #888;
+}
+
+.markdown .hidden {
+  display: none;
+}
+
+.markdown h1 {
+  color: #eee;
+}
+
+.markdown h2 {
+  margin: 1em 0 0.25em;
+  color: #eee;
+}
+
+.markdown strong {
+  color: #bbb;
+}
+
+.markdown ul {
+  margin-left: 1em;
+}
+
+.markdown p {
+  margin: 0.5em 0 0.5em;
+}

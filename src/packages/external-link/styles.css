@@ -1,0 +1,14 @@
+
+.external-link {
+  cursor: pointer;
+}
+
+/* add exit icon to right*/
+/* .external-link:after {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  background: transparent url('./images/exit.svg') no-repeat;
+} */

@@ -1,0 +1,96 @@
+.signinup {
+  margin: 3em auto 3em;
+  padding: 0 1em;
+  max-width: 1020px;
+}
+
+.signinup a {
+  color: gray;
+}
+.signinup a:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.signinup-contents {
+  display: flex;
+}
+
+.signinup-buttons {
+  flex: 1.3;
+  margin-right: 2em;
+}
+
+.signinup-email {
+  flex: 1.5;
+  padding: 20px;
+  border: black solid 1px;
+  border-radius: 3px;
+}
+
+.signinup-provider {
+  margin-bottom: 1em;
+  text-align: center;
+}
+.signinup-provider button img {
+  height: 1.2em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  margin-top: 1px;
+}
+.signinup-provider button span {
+  vertical-align: middle;
+}
+
+
+.signinup-email h2 {
+  margin: 0 0 1em;
+}
+
+.signinup-email label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.signinup-email input[type="text"],
+.signinup-email input[type="search"],
+.signinup-email input[type="email"],
+.signinup-email input[type="password"] {
+  padding: 0.25em 0.25em 0.5em;
+  width: 100%;
+  margin: 0 0 0.5em;
+  outline: none;
+  line-height: 1.2em;
+  /* font-size: 1em; */
+  /* background: white; */
+  border: 1px solid #ccc;
+  color: #222;
+  border-radius: 3px;
+}
+.signinup-email input:focus {
+  border: 1px solid orange;
+}
+
+.signinup button {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  color: #222;
+  background-color: transparent;
+  border: 1px solid #777;
+  border-radius: 4px;
+  /* font-weight: bold; */
+  padding: 0.25em 1em;
+}
+.signinup button:hover {
+  background-color: #eee;
+}
+
+.signinup-footer {
+  margin-top: 3em;
+  text-align: center;
+}

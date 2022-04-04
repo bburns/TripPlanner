@@ -1,0 +1,38 @@
+.sidebar-donate {
+  padding: 8px;
+  /* width: 85%; */
+  /* border-bottom: 1px solid black; */
+  border-top: 1px solid gray;
+}
+
+.sidebar-donate form {
+  margin-top: 8px;
+}
+.sidebar-donate input[type="submit"] {
+  padding: 4px;
+  color: #4af;
+  background: transparent;
+  border: 1px solid #28d;
+  cursor: pointer;
+}
+.sidebar-donate input[type="submit"]:hover {
+  border: 1px solid #4af;
+  background: #346;
+}
+
+/* .sidebar-donate input[type="image"] {
+  width: 85%;
+  background: #ddd;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.sidebar-donate input[type="image"]:hover {
+  background: white;
+} */
+
+.sidebar-donate-outro {
+  margin-top: 8px;
+}
+.sidebar-donate-outro a {
+  border: none;
+}

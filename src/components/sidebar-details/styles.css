@@ -1,0 +1,31 @@
+.sidebar-details {
+  padding: 8px;
+}
+
+.sidebar-details-photos {
+  margin-bottom: 8px;
+}
+
+.sidebar-details-photo img {
+  object-fit: cover;
+  width: 100%;
+  /* height: auto; */
+  /* max-height: 150px; */
+  height: 150px; /* as in code */
+}
+
+.sidebar-details-url {
+  margin-bottom: 8px;
+}
+
+.sidebar-details-rating {
+  margin-bottom: 8px;
+}
+
+.sidebar-details-reviews-title {
+  color: white;
+}
+.sidebar-details-review {
+  margin-bottom: 8px;
+}
+

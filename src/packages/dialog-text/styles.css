@@ -1,0 +1,23 @@
+
+/* use style object in code, as that takes precedence over these */
+.ReactModal__Overlay {
+}
+.ReactModal__Content {
+}
+
+.dialog-text-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.dialog-text-header button {
+  float: right;
+  padding: 2px 1em;
+  margin-left: 8px;
+}
+.ReactModal__Content textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: 1px solid gray;
+  color: #333;
+}

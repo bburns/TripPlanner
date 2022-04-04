@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@babel/env", "@babel/react", "babel-preset-mobx"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
+  ]
+}

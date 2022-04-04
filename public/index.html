@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>%REACT_APP_NAME% - %REACT_APP_SLOGAN%</title>
+    <meta name="description" content="%REACT_APP_SITE_DESCRIPTION%">
+    <meta name="subject" content="%REACT_APP_SITE_SUBJECT%">
+    <meta property="keywords" content="%REACT_APP_SITE_KEYWORDS%">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="%PUBLIC_URL%" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <!-- opengraph/twittercard -->
+    <meta property="og:title" content="%REACT_APP_NAME% - %REACT_APP_SLOGAN%" />
+    <meta property="og:description" content="%REACT_APP_SITE_DESCRIPTION%" />
+    <meta property="og:image" content="%PUBLIC_URL%/img/tripplanner1200px.jpg" itemprop="thumbnailUrl" />
+    <meta property="og:url" content="%PUBLIC_URL%" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="fb:app_id" content="420457321643024" /> -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:site" content="@moveto_io" /> -->
+    <meta name="twitter:creator" content="@bburnskm" />
+
+    <!-- location -->
+    <meta name="geo.region" content="US-TX" />
+    <meta name="geo.placename" content="Austin" />
+
+    <!-- structured data -->
+    <script type="application/ld+json">
+          {
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              "name": "TripPlanner",
+              "url": "%PUBLIC_URL%",
+              "logo": "%PUBLIC_URL%/img/logo.svg",
+              "sameAs": [
+                  "https://www.facebook.com/trip_planner_cafe",
+                  "https://www.twitter.com/trip_planner_cafe"
+              ]
+          }
+    </script>
+
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=%REACT_APP_MAP_KEY%&libraries=places"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

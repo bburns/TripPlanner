@@ -1,0 +1,68 @@
+html {
+  height: 100vh;
+  font-size: 16px; /* base font-size must be set here - rem sizes refer to this */
+  line-height: 1.1;
+}
+body {
+  height: 100%; /* need for google maps */
+  margin: 0;
+  padding: 0;
+  /* from storybook */
+  /* Segoe UI comes with Windows - San Francisco with Mac */
+  font-family: "San Francisco", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Lucida Grande", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* this is the base react div */
+#root {
+  /* need height for google maps to work properly */
+  height: 100%;
+  /* flex lets the sidebars and map take up space remaining under header */
+  display: flex;
+  flex-direction: column;
+}
+
+/* allow buttons to contain clickable spans, imgs etc */
+/* see https://stackoverflow.com/questions/26402033/missing-click-event-for-span-inside-button-element-on-firefox */
+button * {
+  pointer-events: none;
+}
+
+/* reset all anchors to look the same - override where needed */
+a {
+  color: gray;
+  text-decoration: none;
+  border-bottom: 1px solid gray;
+}
+a:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+h2 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0;
+}
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* align bullets with left margin */
+ul {
+  margin: 0;
+  padding-left: 1em;
+}
+

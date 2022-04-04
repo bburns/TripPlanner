@@ -1,0 +1,23 @@
+/* see also packages/menu */
+
+.header-menu {
+}
+
+.header-menu div {
+  color: black;
+}
+
+.header-menu a:hover {
+  color: black;
+}
+
+.header-menu-signin {
+  border: none;
+}
+a.header-menu-signin:hover {
+  color: white;
+}
+
+.header-menu .menu-contents a:hover {
+  border: none;
+}

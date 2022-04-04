@@ -1,0 +1,60 @@
+.searchbox {
+  /* this MUST be absolute so dropdown will open over the map instead of making header bigger */
+  /* position: absolute; */
+  /* top: 0.4em; */
+  /* left: 18em;  */
+  /* leave space for brand */
+  /* right: 7em;  */
+  /* leave space for signinup */
+  /* width: 100%; */
+  /* width: 70%; */
+  /* max-width: calc( 100% - 20em); */
+  /* left: 55%; */
+  /* width: auto; */
+  /* transform: translateX(-50%) */
+  /* width: 100%; */
+  /* max-width: 40em; */
+}
+
+.searchbox-input {
+  width: 100%;
+  border: white;
+  border-radius: 2px;
+  padding: 1px 6px;
+}
+
+.searchbox-input,
+.searchbox-input::-moz-placeholder {
+  font-size: 1em;
+  height: 1.3em;
+}
+
+.searchbox-dropdown {
+  border: 1px solid #333;
+  width: 100%;
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.searchbox-item {
+  background: white;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.searchbox-item--active {
+  background: #ccc;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.suggestion-main {
+}
+.suggestion-secondary {
+  color: #666;
+}

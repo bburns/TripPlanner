@@ -1,0 +1,25 @@
+.sidebar {
+  flex-basis: 24em;
+  flex-grow: 0;
+  flex-shrink: 1;
+  background: #222;
+  color: #aaa;
+  overflow-y: auto;
+  /* for ad etc */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-title {
+  padding: 8px;
+}
+.sidebar-title h2 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.sidebar-title h2 img {
+  height: 16px;
+  width: 16px;
+}

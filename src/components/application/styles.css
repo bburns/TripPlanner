@@ -1,0 +1,12 @@
+.app {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.app-contents {
+  display: flex;
+  flex-flow: row;
+  /* height: 100%; */
+  height: calc(100% - 40px); /* sync with header height */
+}

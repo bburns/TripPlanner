@@ -1,0 +1,15 @@
+.sidebar-links {
+  padding: 8px;
+}
+.sidebar-links h3 {
+  color: #ccc;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #444;
+}
+
+.sidebar-links-places {
+  margin-bottom: 1em;
+}
+.sidebar-links-homeaway {
+  margin-bottom: 1em;
+}
