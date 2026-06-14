@@ -8,7 +8,7 @@
     "build": "react-app-rewired build",
     "test-mocha": "mocha --require ts-node/register src/**/test.ts --watch",
     "test": "react-app-rewired test",
-    "coverage": "npm test -- --coverage",
+    "coverage": "pnpm test -- --coverage",
     "eject": "react-scripts eject"
   },
   "jest": {
