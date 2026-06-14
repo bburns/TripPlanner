@@ -14,7 +14,7 @@ import pinGreen from './images/mm_20_green.png';
 import pinRed from './images/mm_20_red.png';
 
 
-const keys = { key: process.env.REACT_APP_MAP_KEY };
+const keys = { key: import.meta.env.REACT_APP_MAP_KEY };
 
 const mapOptions = {
   fullscreenControl: false,

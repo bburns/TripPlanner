@@ -1,7 +1,7 @@
 //. put these all in .env.develop, .env.test, .end.production so can swap out different dbs
 // trip-planner-cafe, -develop, -test?
 export const config = {
-  apiKey: process.env.REACT_APP_FIREBASE_KEY,
+  apiKey: import.meta.env.REACT_APP_FIREBASE_KEY,
   authDomain: 'tripplanner-bb.firebaseapp.com',
   databaseURL: 'https://tripplanner-bb.firebaseio.com',
   projectId: 'tripplanner-bb',

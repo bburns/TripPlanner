@@ -29,7 +29,7 @@ export default observer(() => {
             <img src={logo} />
           </span>
           <h1 className="header-title">
-            {process.env.REACT_APP_NAME}
+            {import.meta.env.REACT_APP_NAME}
           </h1>
           <span className="header-version">
             {flags.version}
