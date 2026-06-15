@@ -18,25 +18,25 @@ A simple trip planner
 
 ## Available Scripts
 
-In the project directory, you can run:
+This project is built with [Vite](https://vite.dev/) (migrated from create-react-app). In the project directory, you can run:
 
-### `pnpm start`
+### `pnpm dev`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in development mode with hot module replacement.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser (Vite picks the next free port if 3000 is taken).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `pnpm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`pnpm start` is kept as an alias for `pnpm dev`.
 
 ### `pnpm build`
 
 Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The output is minified with hashed filenames, ready to deploy (Firebase Hosting serves from `build`).
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### `pnpm preview`
+
+Serves the production `build` locally so you can sanity-check it before deploying.
+
+### `pnpm test`
+
+Runs the [Mocha](https://mochajs.org/) test suite once (`src/**/test.ts`, via ts-node).<br>
+Use `pnpm test-mocha` for the same suite in interactive watch mode.
