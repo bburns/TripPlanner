@@ -6,7 +6,9 @@ import { INode, NodeId } from '../types';
 // import { Datastore } from '../datastores/types';
 
 
-export const NeomemParentChild = (SuperClass: any) => class extends SuperClass {
+export const NeomemParentChild = (SuperClass: any) => {
+
+class NeomemParentChildMixin extends SuperClass {
 
   // recursively delete down the parent child relations
   async deleteNode(nodeId: NodeId): Promise<void> {
@@ -195,8 +197,11 @@ export const NeomemParentChild = (SuperClass: any) => class extends SuperClass {
 
 }
 
-decorate(NeomemParentChild, {
+decorate(NeomemParentChildMixin, {
   addChild: action,
   removeChild: action,
   moveChild: action,
 });
+
+return NeomemParentChildMixin;
+};
